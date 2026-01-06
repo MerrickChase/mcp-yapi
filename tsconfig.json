@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+      /* === 运行环境 === */
+      "target": "ES2022",
+      "lib": ["ES2022"],
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+  
+      /* === 输出 === */
+      "rootDir": "src",
+      "outDir": "dist",
+      "declaration": false,
+      "sourceMap": true,
+  
+      /* === Node / MCP 必需 === */
+      "types": ["node"],
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+  
+      /* === 严格性（企业可控） === */
+      "strict": true,
+      "noImplicitAny": true,
+      "skipLibCheck": true,
+      "allowImportingTsExtensions": false,
+  
+      /* === 开发体验 === */
+      "resolveJsonModule": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"],
+    "ts-node": {
+      "esm": true,
+      "experimentalSpecifierResolution": "node"
+    }
+  }
+  
