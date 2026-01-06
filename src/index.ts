@@ -1,13 +1,12 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { tools } from "./tools.js";
 
-const server = new McpServer(
-  {
-    name: "yapi-mcp",
-    version: "0.1.0"
-  }
-);
+const server = new McpServer({
+  name: "transn-yapi-mcp",
+  version: "0.1.0"
+});
 
 // 注册工具
 for (const tool of tools) {

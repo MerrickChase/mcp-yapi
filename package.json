@@ -1,11 +1,27 @@
 {
-  "name": "yapi-mcp",
+  "name": "transn-yapi-mcp",
   "version": "0.1.0",
+  "description": "An MCP server that fetches structured API metadata from YAPI and exposes it as tools.",
   "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "transn-yapi-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "author": {
+    "name": "merrick",
+    "email": "merrick.hu@transn.com"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
